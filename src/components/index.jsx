@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './index.css'
+import { BsFillMoonFill, BsSunFill } from 'react-icons/bs';
 
 const Counter = () => {
     const [counting, setCounting] = useState(0);
@@ -16,11 +17,13 @@ const Counter = () => {
             <div className="counter">
                 {counting}
             </div>
-            <button onClick={() => { setCounting(counting + 1) }} className="bt">Addition</button>
-            <button onClick={() => { setCounting(counting + -1) }} className="bt">Subtraction</button> <br />
+            <div className="btns">
+            <button onClick={() => { setCounting(counting + 1) }} className="bt">Increment</button>
+            <button onClick={() => { setCounting(counting + -1) }} className="bt">Decrement</button> <br />
             <button onClick={() => { setCounting(0) }} className="bt">Reset</button>
+            </div>
             <div className="mode">
-                <button onClick={clickHandler}></button>
+                <button className="icon" onClick={clickHandler}>{(isLit) ? <BsSunFill/> : <BsFillMoonFill/>}</button>
             </div>
         </div>
     )

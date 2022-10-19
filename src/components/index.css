@@ -5,6 +5,15 @@
 
 .mainContainer {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
 }
 
 .bt {
@@ -14,10 +23,9 @@
     width: 100px;
     height: 50px;
     font-size: 16px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 1px;
     /* font-weight: 500; */
-
     /* outline: none; */
     
 }
@@ -39,7 +47,7 @@
 .counter {
     font-size: larger;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .Lit {
@@ -58,4 +66,16 @@
     background-color: rgb(0, 0, 0);
     color: white;
     /* transition: 0.5s; */
+}
+
+.icon {
+    border: none;
+    font-size: xx-large;
+    color: var(--main-color);
+    background-color: var(--bgcolor);
+    margin-top: 50px;
+}
+
+.icon:hover {
+    cursor: pointer;
 }
